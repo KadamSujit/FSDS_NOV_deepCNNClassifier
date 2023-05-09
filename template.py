@@ -9,13 +9,16 @@ package_name="deepClassifier"
 
 list_of_files = [
     ".github/workflows/.gitkeep", #it is inside .githup/workflows mainly used for CICD. As empty folders are never uploaded on github, hence we keep this .gitkeep file in it.
-    f"src/{package_name}/__init__.py", #__init__.py helps to understand python that it is a package
+    f"src/{package_name}/__init__.py", #__init__.py helps to understand python that it is a package/folder.
     f"src/{package_name}/components/__init__.py",
     f"src/{package_name}/utils/__init__.py",
     f"src/{package_name}/config/__init__.py",
     f"src/{package_name}/pipeline/__init__.py",
     f"src/{package_name}/entity/__init__.py",
     f"src/{package_name}/constants/__init__.py",
+    "tests/__init__.py", #this folder is used for testing purpose
+    "tests/unit/__init__.py", #unit test is use for any function/class testing
+    "tests/integration/__init__.py", # integration is used for testing multiple components together. e.g testing pipeline, etc
     "configs/config.yaml",
     "dvc.yaml", # Data Version Control pipeline
     "params.yaml", #contains all our training parameters
@@ -23,7 +26,7 @@ list_of_files = [
     "requirements.txt", #requirements file for libraries
     "requirements_dev.txt", #requirements only for development purpose
     "setup.py", #
-    "setup.cfg", # only need if we are creating python packages
+    "setup.cfg", # only need if we are creating python packages. It contains metadata of our project
     "pyproject.toml", # only need if we are creating python packages
     "tox.ini", # required for doing testing of project locally
     "research/trials.ipynb", #creating jupyter notebook file to test small codes here itself
