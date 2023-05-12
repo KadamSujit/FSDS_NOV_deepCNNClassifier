@@ -12,7 +12,7 @@ logging.basicConfig(
     format=logging_str, # logging format
     handlers= [ #means if we want logging statments only in file or also in terminal, here we want both
         logging.FileHandler(log_filepath), # writes o/p in file
-        logging.StreamHandler(sys.stdout), #prints output in terminal
+        #logging.StreamHandler(sys.stdout), #prints output in terminal
     ])
 
 logger = logging.getLogger("deepClassifierLogger")
