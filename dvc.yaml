@@ -1,0 +1,8 @@
+stages:
+  data_ingestion:
+    cmd: python src/deepClassifier/components/data_ingestion.py
+    deps:
+      - src/deepClassifier/components/data_ingestion.py
+      - configs/config.yaml
+    outs:
+       - artifacts/data_ingestion/PetImages
