@@ -48,4 +48,7 @@ class DataIngestion:
             for f in tqdm(updated_list_of_files): #tqdm is a lib that gives us prompt
                 self._preprocess(zf, f, self.config.unzip_dir)
             
+    def create_test_data(self):
+        '''separate 30% data into test data'''
+        pass
     
