@@ -14,3 +14,27 @@ stages:
       md5: 3a5cf86541f22c236620ce5b952ad684.dir
       size: 848866410
       nfiles: 24998
+  prepare_base_model:
+    cmd: python src/deepClassifier/pipeline/stage_02_prepare_base_model.py
+    deps:
+    - path: configs/config.yaml
+      md5: 723af65b4e7912a30197bf8b97480d97
+      size: 832
+    - path: src/deepClassifier/pipeline/stage_02_prepare_base_model.py
+      md5: 037d32f3eaf193478e28a235aa58c95e
+      size: 865
+    params:
+      params.yaml:
+        CLASSES: 2
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+        INCLUDE_TOP: false
+        LEARNING_RATE: 0.01
+        WEIGHTS: imagenet
+    outs:
+    - path: artifacts/prepare_base_model
+      md5: d2c05d116ce69759f22ca94e4cb3504d.dir
+      size: 118054560
+      nfiles: 2
