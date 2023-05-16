@@ -25,6 +25,7 @@ class Training:
             validation_split = 0.20
         )
 
+        # for image resizing
         dataflow_kwargs = dict( #it is a dictionary
             target_size = self.config.params_image_size [:-1], #channel info of image is not required, hence we take -1, means all rows and coloumns except last.
             batch_size = self.config.params_batch_size,
