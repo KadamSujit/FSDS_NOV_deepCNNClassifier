@@ -15,3 +15,28 @@
 11. run "dvc reproduce" for running all the stages in pipeline
 
 ![](https://raw.githubusercontent.com/KadamSujit/FSDS_NOV_deepCNNClassifier/master/docs/images/Data%20Ingestion%402x.png)
+
+
+# to run in cmd/gitbash terminal for local machine
+mlflow server \
+--backend-store-uri sqlite:///mlflow.db \
+--default-artifact-root ./artifacts \
+--host 0.0.0.0 -p 1234
+
+
+
+
+STEP 1: Set the env variable | Get it from dagshub -> remote tab -> mlflow tab
+
+MLFLOW_TRACKING_URI=https://dagshub.com/KadamSujit/FSDS_NOV_deepCNNClassifier.mlflow \
+MLFLOW_TRACKING_USERNAME=KadamSujit \
+MLFLOW_TRACKING_PASSWORD=7a6c3d8d82f747a0f5c203b2a1eece52804c583f \
+python script.py
+
+
+
+STEP 2: install mlflow
+
+STEP 3: Set remote URI
+
+STEP 4: Use context manager of mlflow to start run and then log metrics, params and model
